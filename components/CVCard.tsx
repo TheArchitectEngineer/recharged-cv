@@ -22,7 +22,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { CVCardPreview } from "./CVCardPreview"
 import { Button } from "./ui/button"
 
-export const CVCard = ({ id }: any) => {
+export const CVCard = ({ id, cv }: any) => {
   const supabase = createClientComponentClient()
 
   const router = useRouter()
@@ -44,7 +44,7 @@ export const CVCard = ({ id }: any) => {
   return (
     <Card className="flex h-full flex-col justify-between">
       <CardContent className="pt-6">
-        <CVCardPreview id={id} />
+        <CVCardPreview cv={cv} />
       </CardContent>
       <CardFooter>
         <div className="flex w-full justify-between">
