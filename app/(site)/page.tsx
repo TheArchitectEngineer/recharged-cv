@@ -19,5 +19,9 @@ export default async function Home() {
 
   if (user) redirect("/resumes")
 
-  return <Hero />
+  const { count } = await supabase
+    .from("resumes")
+    .select("*", { count: "exact" })
+
+  return <Hero count={count} />
 }
