@@ -29,20 +29,24 @@ export default async function RootLayout({
             <h1 className="flex shrink-0 items-center font-bold ">
               <Link href="/">Recharged CV</Link>
             </h1>
-            <div className="flex gap-4">
+            <div className="flex items-center gap-4">
               <Link
                 href="https://twitter.com/roberthgnz"
                 target="_blank"
                 aria-label="Roberth on Twitter"
+                className="flex items-center gap-2"
               >
                 <BsTwitter className="size-4" />
+                <span>Follow</span>
               </Link>
               <Link
                 href="https://github.com/roberthgnz/recharged-cv"
                 target="_blank"
                 aria-label="Roberth on GitHub"
+                className="flex items-center gap-2"
               >
                 <BsGithub className="size-4" />
+                <span>Open Source</span>
               </Link>
             </div>
           </nav>
